@@ -4,7 +4,7 @@
   i2pd - Invisible Internet Protocol Daemon
 </h1>
 
-<p align="center"><b>This is the snap for [i2pd](https://github.com/PurpleI2P/i2pd)</b>, <i>"Invisible Internet Protocol Daemon"</i>. It works on Ubuntu, Fedora, Debian, and other major Linux
+<p align="center"><b>This is the snap for i2pd</b>, <i>"Invisible Internet Protocol Daemon"</i>. It works on Ubuntu, Fedora, Debian, and other major Linux
 distributions.</p>
 
 
