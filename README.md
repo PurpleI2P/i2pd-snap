@@ -11,7 +11,7 @@ distributions.</p>
 ## Install
 
     sudo apt install snapd-xdg-open
-    sudo snap install i2pd
+    sudo snap install --edge i2pd
 
 ([Don't have snapd installed?](https://snapcraft.io/docs/core/install))
 
@@ -32,8 +32,8 @@ upstream so [i2pd](https://github.com/PurpleI2P/i2pd) can authoritatively publis
   - [ ] Create a snap that runs in `devmode`
   - [ ] Register the snap in the store, **using the preferred upstream name**
   - [x] Add a screenshot to this `README.md`
-  - [ ] Publish the `devmode` snap in the Snap store edge channel
-  - [ ] Add install instructions to this `README.md`
+  - [x] Publish the `devmode` snap in the Snap store edge channel
+  - [x] Add install instructions to this `README.md`
   - [ ] Update snap store metadata, icons and screenshots
   - [x] Convert the snap to `strict` confinement, or `classic` confinement if it qualifies
   - [ ] Publish the confined snap in the Snap store beta channel
