@@ -15,6 +15,26 @@ distributions.</p>
 
 ([Don't have snapd installed?](https://snapcraft.io/docs/core/install))
 
+## Usage
+
+Managing with systemd:
+
+    systemctl status snap.i2pd.i2pd.service
+    systemctl stop snap.i2pd.i2pd.service
+    systemctl start snap.i2pd.i2pd.service
+
+View logs:
+
+    journalctl -u snap.i2pd.i2pd
+
+Graceful router shutdown:
+
+    sudo i2pd.graceful-shutdown
+
+Reload config after changing `tunnels.conf` file:
+
+    sudo i2pd.reload-tunnels-conf
+
 
 <p align="center">Published for :penguin: with :gift_heart: by Snapcrafters</p>
 
@@ -29,8 +49,8 @@ upstream so [i2pd](https://github.com/PurpleI2P/i2pd) can authoritatively publis
     - If you have already forked the Snapcrafter template to your account and want to create another snap, you'll need to use GitHub's [Import repository](https://github.com/new/import) feature because you can only fork a repository once.
   - [x] Rename the forked Snapcrafters template repository
   - [x] Update logos and references to `[Project]` and `[my-snap-name]`
-  - [ ] Create a snap that runs in `devmode`
-  - [ ] Register the snap in the store, **using the preferred upstream name**
+  - [x] Create a snap that runs in `devmode`
+  - [x] Register the snap in the store, **using the preferred upstream name**
   - [x] Add a screenshot to this `README.md`
   - [x] Publish the `devmode` snap in the Snap store edge channel
   - [x] Add install instructions to this `README.md`
