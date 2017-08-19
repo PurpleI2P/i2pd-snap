@@ -1,9 +1,9 @@
 #!/bin/sh
 
-if [ ! -d "$SNAP_USER_DATA/.i2pd" ]; then
-  mkdir $SNAP_USER_DATA/.i2pd/
-  cp -R $SNAP/certificates $SNAP_USER_DATA/.i2pd/
-  cp -R $SNAP/i2pd.conf $SNAP_USER_DATA/.i2pd/
+if [ ! -d "$SNAP_DATA/datadir" ]; then
+  mkdir $SNAP_DATA/datadir/
+  cp -R $SNAP/certificates $SNAP_DATA/datadir/
+  cp -R $SNAP/i2pd.conf $SNAP_DATA/datadir/
 fi
 
-exec "$SNAP/bin/i2pd" "$@"
+exec "$SNAP/bin/i2pd" --datadir=$SNAP_DATA/datadir/
