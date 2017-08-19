@@ -19,13 +19,13 @@ distributions.</p>
 
 Managing with systemd:
 
-    systemctl status snap.i2pd.i2pd.service
-    systemctl stop snap.i2pd.i2pd.service
-    systemctl start snap.i2pd.i2pd.service
+    systemctl status snap.i2pd.daemon.service
+    systemctl stop snap.i2pd.daemon.service
+    systemctl start snap.i2pd.daemon.service
 
 View logs:
 
-    journalctl -u snap.i2pd.i2pd
+    journalctl -u snap.i2pd.daemon
 
 Graceful router shutdown:
 
