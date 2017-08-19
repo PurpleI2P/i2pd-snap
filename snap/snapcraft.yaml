@@ -19,14 +19,14 @@ grade: devel
 confinement: strict
 
 apps:
-  i2pd:
+  daemon:
     command: i2pd-wrapper
     daemon: simple
     plugs: [network,network-bind]
   graceful-shutdown:
-    command: kill -2 `cat $SNAP_USER_DATA/.i2pd/i2pd.pid`
+    command: kill -2 `cat $SNAP_DATA/datadir/i2pd.pid`
   reload-tunnels-conf:
-    command: kill -1 `cat $SNAP_USER_DATA/.i2pd/i2pd.pid`
+    command: kill -1 `cat $SNAP_DATA/datadir/i2pd.pid`
 
 parts:
   i2pd:
