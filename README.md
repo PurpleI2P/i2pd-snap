@@ -30,6 +30,26 @@ distributions.</p>
 
 ([Don't have snapd installed?](https://snapcraft.io/docs/core/install))
 
+## Usage
+
+Managing with systemd:
+
+    systemctl status snap.i2pd.i2pd.service
+    systemctl stop snap.i2pd.i2pd.service
+    systemctl start snap.i2pd.i2pd.service
+
+View logs:
+
+    journalctl -u snap.i2pd.i2pd
+
+Graceful router shutdown:
+
+    sudo i2pd.graceful-shutdown
+
+Reload config after changing `tunnels.conf` file:
+
+    sudo i2pd.reload-tunnels-conf
+
 ## Remaining tasks
 
 Snapcrafters ([join us](https://forum.snapcraft.io/t/snapcrafters-reboot/24625)) are working to land snap install documentation and the [snapcraft.yaml](https://github.com/snapcrafters/fork-and-rename-me/blob/master/snap/snapcraft.yaml) upstream so [Project] can authoritatively publish future releases.
@@ -38,8 +58,8 @@ Snapcrafters ([join us](https://forum.snapcraft.io/t/snapcrafters-reboot/24625))
   - [x] Give the newly created repository a sensible name, like `godzilla` if you're snapping the Godzilla software (*Note: Do not use `snap` in this name.*)
   - [x] Update the description of the repository to `Official snap for i2pd`
   - [x] Update logos and references to `[Project]` and `[my-snap-name]`
-  - [ ] Create a snap that runs in `devmode`
-  - [ ] Convert the snap to `strict` confinement, or `classic` confinement if it qualifies
+  - [x] Create a snap that runs in `devmode`
+  - [x] Convert the snap to `strict` confinement, or `classic` confinement if it qualifies
   - [x] Register the snap in the store, **using the preferred upstream name**
   - [ ] Add a screenshot to this `README.md`
   - [x] Add install instructions to this `README.md`
@@ -69,7 +89,6 @@ If you have any questions, [post in the Snapcraft forum](https://forum.snapcraft
 
 ## The Snapcrafters
 
-<<<<<<< HEAD
 | [![l-n-s](https://gravatar.com/avatar/bc0bced65e963eb5c3a16cab8b004431/?s=128)](https://github.com/l-n-s/) |
 | :---: |
 | [l-n-s](https://github.com/l-n-s/) |
