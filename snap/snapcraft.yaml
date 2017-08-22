@@ -15,7 +15,9 @@ description: |
     All communications over I2P are anonymous and end-to-end encrypted,
     participants don't reveal their real IP addresses. 
 
-grade: devel
+icon: i2pd-logo.png
+type: app
+grade: stable
 confinement: strict
 
 apps:
