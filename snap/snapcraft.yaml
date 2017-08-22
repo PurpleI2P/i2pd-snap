@@ -36,6 +36,9 @@ parts:
     source-type: git
     source-tag: 2.15.0
     plugin: make
+    make-parameters:
+      - USE_AVX=no
+      - USE_AESNI=no
     build-packages:
       - build-essential
       - libboost-date-time-dev
@@ -44,7 +47,6 @@ parts:
       - libboost-system-dev
       - libssl-dev
       - zlib1g-dev
-      - libminiupnpc-dev
     artifacts:
       - i2pd
       - contrib/certificates
