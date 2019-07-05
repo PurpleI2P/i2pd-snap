@@ -7,7 +7,7 @@
 ## 5.  `snapcraft snap`
 
 name: i2pd
-version: 2.26.0
+version: 2.27.0
 summary: Distributed anonymous networking framework
 description: |
     i2pd (I2P Daemon) is a full-featured C++ implementation of I2P client.
@@ -34,7 +34,7 @@ parts:
   i2pd:
     source: https://github.com/PurpleI2P/i2pd.git
     source-type: git
-    source-tag: 2.26.0
+    source-tag: 2.27.0
     plugin: make
     make-parameters:
       - USE_AVX=no
