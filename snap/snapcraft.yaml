@@ -56,5 +56,5 @@ parts:
       contrib/*: .
   wrapper:
     plugin: dump
-    source: snap/
+    source: snap/local/
     stage: [i2pd-wrapper]
