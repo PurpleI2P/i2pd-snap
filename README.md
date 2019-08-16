@@ -7,11 +7,18 @@
 <p align="center"><b>This is the snap for i2pd</b>, <i>"Invisible Internet Protocol Daemon"</i>. It works on Ubuntu, Fedora, Debian, and other major Linux
 distributions.</p>
 
+<p align="center">
+<a href="https://build.snapcraft.io/user/PurpleI2P/i2pd-snap"><img src="https://build.snapcraft.io/badge/PurpleI2P/i2pd-snap.svg" alt="Snap Status"></a>
+</p>
+
+<p align="center">Published for :penguin: with :gift_heart: by Snapcrafters</p>
 
 ## Install
 
     sudo apt install snapd-xdg-open
     sudo snap install --edge i2pd
+
+[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-white.svg)](https://snapcraft.io/i2pd)
 
 ([Don't have snapd installed?](https://snapcraft.io/docs/core/install))
 
@@ -35,9 +42,6 @@ Reload config after changing `tunnels.conf` file:
 
     sudo i2pd.reload-tunnels-conf
 
-
-<p align="center">Published for :penguin: with :gift_heart: by Snapcrafters</p>
-
 ## Remaining tasks
 
 Snapcrafters ([join us](https://forum.snapcraft.io/t/join-snapcrafters/1325)) 
@@ -56,16 +60,16 @@ upstream so [i2pd](https://github.com/PurpleI2P/i2pd) can authoritatively publis
   - [x] Add install instructions to this `README.md`
   - [x] Update snap store metadata, icons and screenshots
   - [x] Convert the snap to `strict` confinement, or `classic` confinement if it qualifies
-  - [ ] Publish the confined snap in the Snap store beta channel
-  - [ ] Update the install instructions in this `README.md`
+  - [x] Publish the confined snap in the Snap store beta channel
+  - [x] Update the install instructions in this `README.md`
   - [ ] Post a call for testing on the [Snapcraft Forum](https://forum.snapcraft.io) - [link]()
   - [ ] Ask a [Snapcrafters admin](https://github.com/orgs/snapcrafters/people?query=%20role%3Aowner) to fork your repo into github.com/snapcrafters, transfer the snap name from you to snapcrafters, and configure the repo for automatic publishing into edge on commit
-  - [ ] Add the provided Snapcraft build badge to this `README.md`
-  - [ ] Publish the snap in the Snap store stable channel
-  - [ ] Update the install instructions in this `README.md`
+  - [x] Add the provided Snapcraft build badge to this `README.md`
+  - [x] Publish the snap in the Snap store stable channel
+  - [x] Update the install instructions in this `README.md`
   - [ ] Post an announcement in the [Snapcraft Forum](https://forum.snapcraft.io) - [link]()
-  - [ ] Submit a pull request or patch upstream that adds snap install documentation - [link]()
-  - [ ] Submit a pull request or patch upstream that adds the `snapcraft.yaml` and any required assets/launchers - [link]()
+  - [x] Submit a pull request or patch upstream that adds snap install documentation - [link]()
+  - [x] Submit a pull request or patch upstream that adds the `snapcraft.yaml` and any required assets/launchers - [link]()
   - [ ] Add upstream contact information to the `README.md`  
   - If upstream accept the PR:
     - [ ] Request upstream create a Snap store account
@@ -77,4 +81,4 @@ If you have any questions, [post in the Snapcraft forum](https://forum.snapcraft
 ## The Snapcrafters
 
 [l-n-s](https://github.com/l-n-s/)
-
+[r4sas](https://github.com/r4sas/)
