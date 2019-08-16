@@ -28,6 +28,8 @@ distributions.</p>
 
 [![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-white.svg)](https://snapcraft.io/i2pd)
 
+[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-white.svg)](https://snapcraft.io/i2pd)
+
 ([Don't have snapd installed?](https://snapcraft.io/docs/core/install))
 
 ## Usage
@@ -76,7 +78,7 @@ Snapcrafters ([join us](https://forum.snapcraft.io/t/snapcrafters-reboot/24625))
   - [x] Update the install instructions in this `README.md`
   - [ ] Post an announcement in the Snapcraft Forum ["Snapcrafters" category](https://forum.snapcraft.io/c/snapcrafters/23) - [link]()
   - [ ] Ask the Snap Advocacy team to celebrate the snap - [link]()
-  - [ ] Submit a pull request or patch upstream that adds snap install documentation - [link]()
+  - [x] Submit a pull request or patch upstream that adds snap install documentation - [link]()
   - [ ] Ask upstream if they are interested in maintaining the Snap. If they are:
     - [ ] Fork the upstream project, add the snap build files and required assets/launchers to that repo and submit a pull request or patch - [link]()
     - [ ] Add upstream contact information to the `README.md`
@@ -90,8 +92,10 @@ If you have any questions, [post in the Snapcraft forum](https://forum.snapcraft
 ## The Snapcrafters
 
 | [![l-n-s](https://gravatar.com/avatar/bc0bced65e963eb5c3a16cab8b004431/?s=128)](https://github.com/l-n-s/) |
+| [![r4sas](https://gravatar.com/avatar/bc0bced65e963eb5c3a16cab8b004431/?s=128)](https://github.com/r4sas/) |
 | :---: |
 | [l-n-s](https://github.com/l-n-s/) |
+| [r4sas](https://github.com/r4sas/) |
 
 <!-- Uncomment and modify this when you have upstream contacts
 ## Upstream
