@@ -34,7 +34,8 @@ parts:
   i2pd:
     source: https://github.com/PurpleI2P/i2pd.git
     source-type: git
-    source-tag: 2.35.0
+    # source-tag: 2.35.0
+    source-commit: ad84944d20c9dd86058f6bdd6c10ea15d0f62425
     plugin: make
     make-parameters:
       - USE_UPNP=yes
