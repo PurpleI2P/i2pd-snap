@@ -7,7 +7,7 @@
 ## 5.  `snapcraft snap`
 
 name: i2pd
-version: 2.41.0
+version: 2.42.1
 summary: Distributed anonymous networking framework
 description: |
     i2pd (I2P Daemon) is a full-featured C++ implementation of I2P client.
@@ -34,7 +34,7 @@ parts:
   i2pd:
     source: https://github.com/PurpleI2P/i2pd.git
     source-type: git
-    source-tag: 2.41.0
+    source-tag: 2.42.1
     plugin: make
     make-parameters:
       - USE_UPNP=yes
@@ -42,7 +42,7 @@ parts:
     build-packages:
       - build-essential
       - libboost-date-time-dev
-      - libboost-filesystem-dev 
+      - libboost-filesystem-dev
       - libboost-program-options-dev
       - libboost-system-dev
       - libminiupnpc-dev
