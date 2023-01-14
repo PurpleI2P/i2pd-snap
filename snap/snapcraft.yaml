@@ -1,19 +1,13 @@
-#
-## Easiest way to work with this file, from an updated Ubuntu 16.04 LTS image
-## 1.   create a non-root user with sudo priv and perform following steps as non-root
-## 2.  `sudo apt-get update`
-## 3.  `sudo apt-get install snapcraft python build-essential`
-## 4.  `snapcraft stage`
-## 5.  `snapcraft snap`
-
 name: i2pd
 version: 2.45.1
 summary: Distributed anonymous networking framework
 description: |
     i2pd (I2P Daemon) is a full-featured C++ implementation of I2P client.
-    I2P (Invisible Internet Protocol) is a universal anonymous network layer. 
+    I2P (Invisible Internet Protocol) is a universal anonymous network layer.
     All communications over I2P are anonymous and end-to-end encrypted,
-    participants don't reveal their real IP addresses. 
+    participants don't reveal their real IP addresses.
+
+base: core18
 
 icon: i2pd-logo.png
 type: app
