@@ -85,11 +85,8 @@ If you have any questions, [post in the Snapcraft forum](https://forum.snapcraft
 
 ## The Snapcrafters
 
-| [![l-n-s](https://gravatar.com/avatar/bc0bced65e963eb5c3a16cab8b004431/?s=128)](https://github.com/l-n-s/) |
-| [![r4sas](https://gravatar.com/avatar/bc0bced65e963eb5c3a16cab8b004431/?s=128)](https://github.com/r4sas/) |
-| :---: |
-| [l-n-s](https://github.com/l-n-s/) |
-| [r4sas](https://github.com/r4sas/) |
+| [l-n-s](https://github.com/l-n-s/) | [r4sas](https://github.com/r4sas/) |
+| :---: | :---: |
 
 <!-- Uncomment and modify this when you have upstream contacts
 ## Upstream
