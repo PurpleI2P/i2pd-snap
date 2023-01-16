@@ -7,7 +7,7 @@ description: |
     participants don't reveal their real IP addresses.
 version: 2.45.1
 icon: snap/gui/i2pd.png
-base: core22
+base: core20
 grade: stable
 type: app
 confinement: strict
@@ -41,10 +41,10 @@ parts:
       - libssl-dev
       - zlib1g-dev
     stage-packages:
-      - libboost-date-time1.74.0
-      - libboost-filesystem1.74.0
-      - libboost-program-options1.74.0
-      - libboost-system1.74.0
+      - libboost-date-time1.71.0
+      - libboost-filesystem1.71.0
+      - libboost-program-options1.71.0
+      - libboost-system1.71.0
       - libminiupnpc17
       - libssl1.1
       - zlib1g
