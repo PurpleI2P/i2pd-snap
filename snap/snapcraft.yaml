@@ -26,18 +26,18 @@ apps:
     - network-bind
 
   graceful-shutdown:
-    command: bin/kill -2 `cat $SNAP_DATA/datadir/i2pd.pid`
+    command: i2pd-wrapper graceful
 
   reload-tunnels-conf:
-    command: bin/kill -1 `cat $SNAP_DATA/datadir/i2pd.pid`
+    command: i2pd-wrapper reload
 
 parts:
   i2pd:
+    plugin: make
     source: https://github.com/PurpleI2P/i2pd.git
     source-type: git
     #source-tag: 2.45.1
     source-commit: 6ca6591c4365d62873eeac6328e5b1932862a614
-    plugin: make
     make-parameters:
     - USE_UPNP=yes
     - DEBUG=no
@@ -64,4 +64,5 @@ parts:
   wrapper:
     plugin: dump
     source: snap/local/
-    stage: [i2pd-wrapper]
+    stage:
+    - i2pd-wrapper
