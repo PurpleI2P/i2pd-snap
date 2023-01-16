@@ -47,7 +47,7 @@ parts:
     - libminiupnpc-dev
     - libssl-dev
     - zlib1g-dev
-    build-override: |
+    override-build: |
       make DEBUG=no USE_UPNP=yes -j`nproc`
       mkdir $SNAPCRAFT_PART_INSTALL/appdata
       cp i2pd $SNAPCRAFT_PART_INSTALL/bin
