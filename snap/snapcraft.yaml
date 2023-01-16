@@ -1,17 +1,15 @@
 name: i2pd
-version: 2.45.1
 summary: Distributed anonymous networking framework
 description: |
     i2pd (I2P Daemon) is a full-featured C++ implementation of I2P client.
     I2P (Invisible Internet Protocol) is a universal anonymous network layer.
     All communications over I2P are anonymous and end-to-end encrypted,
     participants don't reveal their real IP addresses.
-
-base: core18
-
-icon: i2pd-logo.png
-type: app
+version: 2.45.1
+icon: gui/i2pd.png
+base: core22
 grade: stable
+type: app
 confinement: strict
 
 apps:
@@ -42,7 +40,7 @@ parts:
       - libminiupnpc-dev
       - libssl-dev
       - zlib1g-dev
-    artifacts:
+    stage:
       - i2pd
       - contrib/certificates
       - contrib/i2pd.conf
