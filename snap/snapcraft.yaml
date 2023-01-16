@@ -1,16 +1,19 @@
 name: i2pd
-version: 2.45.1
 summary: Distributed anonymous networking framework
 description: |
     i2pd (I2P Daemon) is a full-featured C++ implementation of I2P client.
     I2P (Invisible Internet Protocol) is a universal anonymous network layer.
     All communications over I2P are anonymous and end-to-end encrypted,
     participants don't reveal their real IP addresses.
+version: 2.45.1
 
-base: core18
+website: https://i2pd.website/
+source-code: https://github.com/PurpleI2P/i2pd-snap
+issues: https://github.com/PurpleI2P/i2pd/issues
+license: BSD-3-Clause
 
-icon: i2pd-logo.png
-type: app
+icon: snap/gui/i2pd.png
+base: core20
 grade: stable
 confinement: strict
 
@@ -18,38 +21,47 @@ apps:
   daemon:
     command: i2pd-wrapper
     daemon: simple
-    plugs: [network,network-bind]
+    plugs:
+    - network
+    - network-bind
+
   graceful-shutdown:
-    command: kill -2 `cat $SNAP_DATA/datadir/i2pd.pid`
+    command: i2pd-wrapper graceful
+
   reload-tunnels-conf:
-    command: kill -1 `cat $SNAP_DATA/datadir/i2pd.pid`
+    command: i2pd-wrapper reload
 
 parts:
   i2pd:
+    plugin: make
     source: https://github.com/PurpleI2P/i2pd.git
     source-type: git
-    source-tag: 2.45.1
-    plugin: make
-    make-parameters:
-      - USE_UPNP=yes
-      - DEBUG=no
+    #source-tag: 2.45.1
+    source-commit: 6ca6591c4365d62873eeac6328e5b1932862a614
     build-packages:
-      - build-essential
-      - libboost-date-time-dev
-      - libboost-filesystem-dev
-      - libboost-program-options-dev
-      - libboost-system-dev
-      - libminiupnpc-dev
-      - libssl-dev
-      - zlib1g-dev
-    artifacts:
-      - i2pd
-      - contrib/certificates
-      - contrib/i2pd.conf
-    organize:
-      i2pd: bin/
-      contrib/*: .
+    - build-essential
+    - libboost-date-time-dev
+    - libboost-filesystem-dev
+    - libboost-program-options-dev
+    - libboost-system-dev
+    - libminiupnpc-dev
+    - libssl-dev
+    - zlib1g-dev
+    override-build: |
+      make DEBUG=no USE_UPNP=yes -j`nproc`
+      mkdir $SNAPCRAFT_PART_INSTALL/appdata
+      cp i2pd $SNAPCRAFT_PART_INSTALL/bin
+      cp -r contrib/i2pd.conf contrib/tunnels.conf contrib/certificates $SNAPCRAFT_PART_INSTALL/appdata
+    stage-packages:
+    - libboost-date-time1.71.0
+    - libboost-filesystem1.71.0
+    - libboost-program-options1.71.0
+    - libboost-system1.71.0
+    - libminiupnpc17
+    - libssl1.1
+    - zlib1g
   wrapper:
     plugin: dump
     source: snap/local/
-    stage: [i2pd-wrapper]
+    stage:
+    - i2pd-wrapper
