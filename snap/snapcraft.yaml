@@ -6,7 +6,7 @@ description: |
     All communications over I2P are anonymous and end-to-end encrypted,
     participants don't reveal their real IP addresses.
 version: 2.45.1
-icon: gui/i2pd.png
+icon: snap/gui/i2pd.png
 base: core22
 grade: stable
 type: app
