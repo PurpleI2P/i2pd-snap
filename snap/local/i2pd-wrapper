@@ -7,8 +7,7 @@ elif [ "$1" == 'graceful' ]; then
 else
     if [ ! -d "$SNAP_DATA/datadir" ]; then
         mkdir $SNAP_DATA/datadir
-        cp -R $SNAP/appdata/certificates $SNAP_DATA/datadir/
-        cp -R $SNAP/appdata/i2pd.conf $SNAP_DATA/datadir/
+        cp -R $SNAP/appdata/* $SNAP_DATA/datadir/
     fi
 
     exec "$SNAP/bin/i2pd" --datadir=$SNAP_DATA/datadir/
