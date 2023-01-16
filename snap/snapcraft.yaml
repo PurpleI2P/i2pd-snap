@@ -41,6 +41,8 @@ parts:
     make-parameters:
     - USE_UPNP=yes
     - DEBUG=no
+    build-attributes:
+    - no-install
     build-packages:
     - build-essential
     - libboost-date-time-dev
