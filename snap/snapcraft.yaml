@@ -38,11 +38,6 @@ parts:
     source-type: git
     #source-tag: 2.45.1
     source-commit: 6ca6591c4365d62873eeac6328e5b1932862a614
-    make-parameters:
-    - USE_UPNP=yes
-    - DEBUG=no
-    build-attributes:
-    - no-install
     build-packages:
     - build-essential
     - libboost-date-time-dev
@@ -52,6 +47,11 @@ parts:
     - libminiupnpc-dev
     - libssl-dev
     - zlib1g-dev
+    build-override: |
+      make DEBUG=no USE_UPNP=yes -j`nproc`
+      mkdir $SNAPCRAFT_PART_INSTALL/appdata
+      cp i2pd $SNAPCRAFT_PART_INSTALL/bin
+      cp -r contrib/i2pd.conf contrib/certificates $SNAPCRAFT_PART_INSTALL/appdata
     stage-packages:
     - libboost-date-time1.71.0
     - libboost-filesystem1.71.0
@@ -60,9 +60,6 @@ parts:
     - libminiupnpc17
     - libssl1.1
     - zlib1g
-    organize:
-      i2pd: bin/
-      contrib/*: .
   wrapper:
     plugin: dump
     source: snap/local/
