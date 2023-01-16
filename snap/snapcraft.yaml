@@ -45,7 +45,7 @@ parts:
       - libboost-filesystem
       - libboost-program-options
       - libboost-system
-      - libminiupnpc
+      - libminiupnpc17
       - libssl1.1
       - zlib1g
     organize:
