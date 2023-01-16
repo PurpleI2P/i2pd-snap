@@ -41,10 +41,10 @@ parts:
       - libssl-dev
       - zlib1g-dev
     stage-packages:
-      - libboost-date-time
-      - libboost-filesystem
-      - libboost-program-options
-      - libboost-system
+      - libboost-date-time1.74.0
+      - libboost-filesystem1.74.0
+      - libboost-program-options1.74.0
+      - libboost-system1.74.0
       - libminiupnpc17
       - libssl1.1
       - zlib1g
