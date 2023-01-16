@@ -40,10 +40,14 @@ parts:
       - libminiupnpc-dev
       - libssl-dev
       - zlib1g-dev
-    stage:
-      - i2pd
-      - contrib/certificates
-      - contrib/i2pd.conf
+    stage-packages:
+      - libboost-date-time
+      - libboost-filesystem
+      - libboost-program-options
+      - libboost-system
+      - libminiupnpc
+      - libssl1.1
+      - zlib1g
     organize:
       i2pd: bin/
       contrib/*: .
