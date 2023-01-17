@@ -49,9 +49,9 @@ parts:
     - zlib1g-dev
     override-build: |
       make DEBUG=no USE_UPNP=yes -j`nproc`
-      mkdir $SNAPCRAFT_PART_INSTALL/appdata
-      cp i2pd $SNAPCRAFT_PART_INSTALL/bin
-      cp -r contrib/i2pd.conf contrib/tunnels.conf contrib/certificates $SNAPCRAFT_PART_INSTALL/appdata
+      mkdir $SNAPCRAFT_PART_INSTALL/appdata $SNAPCRAFT_PART_INSTALL/bin
+      cp i2pd $SNAPCRAFT_PART_INSTALL/bin/
+      cp -r contrib/i2pd.conf contrib/tunnels.conf contrib/certificates $SNAPCRAFT_PART_INSTALL/appdata/
     stage-packages:
     - libboost-date-time1.71.0
     - libboost-filesystem1.71.0
