@@ -10,5 +10,5 @@ else
         cp -R $SNAP/appdata/* $SNAP_DATA/datadir/
     fi
 
-    exec "$SNAP/bin/i2pd" --datadir=$SNAP_DATA/datadir/
+    exec "$SNAP/bin/i2pd" --datadir=$SNAP_DATA/datadir
 fi

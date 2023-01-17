@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="snap/gui/i2pd.png" alt="i2pd">
+  <img src="i2pd.png" alt="i2pd">
   <br />
   i2pd - Invisible Internet Protocol Daemon
 </h1>

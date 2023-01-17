@@ -12,7 +12,7 @@ source-code: https://github.com/PurpleI2P/i2pd-snap
 issues: https://github.com/PurpleI2P/i2pd/issues
 license: BSD-3-Clause
 
-icon: snap/gui/i2pd.png
+icon: i2pd.png
 base: core20
 grade: stable
 confinement: strict
