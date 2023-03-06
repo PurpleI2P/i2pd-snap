@@ -5,7 +5,7 @@ description: |
     I2P (Invisible Internet Protocol) is a universal anonymous network layer.
     All communications over I2P are anonymous and end-to-end encrypted,
     participants don't reveal their real IP addresses.
-version: 2.45.1
+version: 2.46.1
 
 website: https://i2pd.website/
 source-code: https://github.com/PurpleI2P/i2pd-snap
@@ -36,8 +36,8 @@ parts:
     plugin: make
     source: https://github.com/PurpleI2P/i2pd.git
     source-type: git
-    #source-tag: 2.45.1
-    source-commit: 6ca6591c4365d62873eeac6328e5b1932862a614
+    source-tag: 2.46.1
+    #source-commit: 6ca6591c4365d62873eeac6328e5b1932862a614
     build-packages:
     - build-essential
     - libboost-date-time-dev
