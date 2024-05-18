@@ -5,7 +5,7 @@ description: |
     I2P (Invisible Internet Protocol) is a universal anonymous network layer.
     All communications over I2P are anonymous and end-to-end encrypted,
     participants don't reveal their real IP addresses.
-version: 2.50.0
+version: 2.52.0
 
 website: https://i2pd.website/
 source-code: https://github.com/PurpleI2P/i2pd-snap
@@ -13,7 +13,7 @@ issues: https://github.com/PurpleI2P/i2pd/issues
 license: BSD-3-Clause
 
 icon: i2pd.png
-base: core20
+base: core22
 grade: stable
 confinement: strict
 
@@ -36,7 +36,7 @@ parts:
     plugin: make
     source: https://github.com/PurpleI2P/i2pd.git
     source-type: git
-    source-tag: 2.50.0
+    source-tag: 2.52.0
     #source-commit: 6ca6591c4365d62873eeac6328e5b1932862a614
     build-packages:
     - build-essential
@@ -53,12 +53,12 @@ parts:
       cp i2pd $SNAPCRAFT_PART_INSTALL/bin/
       cp -r contrib/i2pd.conf contrib/tunnels.conf contrib/certificates $SNAPCRAFT_PART_INSTALL/appdata/
     stage-packages:
-    - libboost-date-time1.71.0
-    - libboost-filesystem1.71.0
-    - libboost-program-options1.71.0
-    - libboost-system1.71.0
+    - libboost-date-time1.74.0
+    - libboost-filesystem1.74.0
+    - libboost-program-options1.74.0
+    - libboost-system1.74.0
     - libminiupnpc17
-    - libssl1.1
+    - libssl3
     - zlib1g
   wrapper:
     plugin: dump

@@ -5,13 +5,13 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-    
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - uses: snapcore/action-build@v1
         id: build
@@ -23,3 +23,8 @@ jobs:
           # Plugs and Slots declarations to override default denial (requires store assertion to publish)
           # plugs: ./plug-declaration.json
           # slots: ./slot-declaration.json
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: snap
+          path: ${{ steps.build.outputs.snap }}
