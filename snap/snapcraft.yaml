@@ -5,7 +5,7 @@ description: |
     I2P (Invisible Internet Protocol) is a universal anonymous network layer.
     All communications over I2P are anonymous and end-to-end encrypted,
     participants don't reveal their real IP addresses.
-version: 2.59.0
+version: 3.0.0
 
 website: https://i2pd.website/
 source-code: https://github.com/PurpleI2P/i2pd-snap
@@ -13,7 +13,7 @@ issues: https://github.com/PurpleI2P/i2pd/issues
 license: BSD-3-Clause
 
 icon: i2pd.png
-base: core22
+base: core24
 grade: stable
 confinement: strict
 
@@ -36,11 +36,13 @@ parts:
     plugin: make
     source: https://github.com/PurpleI2P/i2pd.git
     source-type: git
-    source-tag: 2.59.0
+    source-tag: 3.0.0
     #source-commit: 6ca6591c4365d62873eeac6328e5b1932862a614
     build-packages:
     - build-essential
+    - libboost-json-dev
     - libboost-program-options-dev
+    - libboost-url-dev
     - libminiupnpc-dev
     - libssl-dev
     - zlib1g-dev
@@ -48,9 +50,11 @@ parts:
       make DEBUG=no USE_UPNP=yes -j`nproc`
       mkdir $SNAPCRAFT_PART_INSTALL/appdata $SNAPCRAFT_PART_INSTALL/bin
       cp i2pd $SNAPCRAFT_PART_INSTALL/bin/
-      cp -r contrib/i2pd.conf contrib/tunnels.conf contrib/certificates $SNAPCRAFT_PART_INSTALL/appdata/
+      cp -r contrib/i2pd.conf contrib/tunnels.conf contrib/certificates contrib/torrents $SNAPCRAFT_PART_INSTALL/appdata/
     stage-packages:
-    - libboost-program-options1.74.0
+    - libboost-json1.83.0
+    - libboost-program-options1.83.0
+    - libboost-url1.83.0
     - libminiupnpc17
     - libssl3
     - zlib1g
